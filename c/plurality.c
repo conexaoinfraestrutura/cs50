@@ -7,6 +7,7 @@ typedef struct
 {
     string nome;
     int voto;
+}
 candidato;
 
 // Defini o tamanho máximo da array de canalhas em uma constante (Obrigatorio)
@@ -76,8 +77,10 @@ void print_winner(void)
         {
             if(canalhas[i].voto < canalhas[j].voto)
             {
-                canalhas[i].voto = canalhas[j].voto;
-                canalhas[i].nome = canalhas[j].nome;
+                canalhas[0].voto = canalhas[j].voto;
+                canalhas[0].nome = canalhas[j].nome;
+                canalhas[j].voto = canalhas[0].voto;
+                canalhas[j].nome = canalhas[0].nome;
             }
         }
     }
