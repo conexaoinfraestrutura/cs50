@@ -2,4 +2,6 @@ cat << EOL > ~/.tmux.conf
 unbind-key C-b
 set-option -g prefix C-a
 bind-key C-a send-prefix
+bind-key C-a last-window
+set -g mouse on
 EOL
